@@ -6,8 +6,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hi, please insert a string: ");
-            String input=Console.ReadLine();
+            Console.WriteLine("Hi, please insert a number: ");
+            int input = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("You wrote: "+ input);
         }
     }
