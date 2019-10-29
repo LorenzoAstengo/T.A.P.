@@ -7,9 +7,18 @@ using MyAttribute;
 
 namespace MyLibrary
 {
-    public class Class1
+    public class MyLibrary
     {
-        [ExecuteMe("Prova1", "Fine")]
+        
+        [ExecuteMe]
+        public void M1()
+        {
+            Console.WriteLine("M1");
+
+        }
+
+        [ExecuteMe("Prova1", " Prova1 fine")]
+        [ExecuteMe("Prova2", "Prova2 fine")]
         public void M1(string s1, string s2)
         {
             Console.WriteLine("M1 {0}, {1}", s1, s2);

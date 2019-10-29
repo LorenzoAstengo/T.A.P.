@@ -12,6 +12,11 @@ namespace MyAttribute
         private readonly string[] _strings;
         private readonly int[] _ints;
 
+        public ExecuteMe()
+        {
+
+        }
+
         public ExecuteMe(params string[] strings)
         {
             this._strings = strings;
