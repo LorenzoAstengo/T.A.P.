@@ -4,8 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using MyAttribute;
-using MyLibrary;
+using MyAttribute;      
 
 namespace Executer
 {
@@ -20,22 +19,23 @@ namespace Executer
                 if (type.IsClass)
                 {
                     Console.WriteLine(type.FullName);
-                    foreach (var method in type.GetMethods())
+                    try
                     {
-                        object[] customAtt = method.GetCustomAttributes(typeof(ExecuteMe), false);
-                        if (customAtt.Any())
+                        var istance = Activator.CreateInstance(type);
+                        foreach (var method in type.GetMethods())
                         {
-                            foreach (ExecuteMe cA in customAtt)                         //Non sono sicuro sia corretto il cast a ExecuteMe
+                            foreach (var customAtt in method.GetCustomAttributes<ExecuteMe>())
                             {
-                                object istance;
-                                istance = Activator.CreateInstance(type);
-                                method.Invoke(istance, cA.GetStrings());      //Così controlla e stampa solo gli attributi stringa
+                                method.Invoke(istance, customAtt.Arguments);
                             }
-                            
-                        }
 
-                        
+                        }
                     }
+                    catch (MissingMethodException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                    
                 }
                     
             }
