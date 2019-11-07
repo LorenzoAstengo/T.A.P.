@@ -1,12 +1,16 @@
 ﻿using System;
+using EmailSenderInterfaces;
+using TinyDependencyInjectionContainer;
 
 namespace DiContainer
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            var resolver= new InterfaceResolver("TDIC_Configuration.txt");
+            var sender = resolver.Instantiate<IEmailSender>();
+            sender.SendEmail("pippo", "pluto");
         }
     }
 }

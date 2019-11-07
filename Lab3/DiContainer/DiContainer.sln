@@ -5,13 +5,18 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiContainer", "DiContainer\DiContainer.csproj", "{B92B2221-FAB5-400D-9DA5-BA51E081F694}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSenderInterfaces", "EmailSenderInterfaces\EmailSenderInterfaces.csproj", "{3CC3C75E-D519-449B-9E97-8F3884739074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailSenderInterfaces", "EmailSenderInterfaces\EmailSenderInterfaces.csproj", "{3CC3C75E-D519-449B-9E97-8F3884739074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSenderImplementation2", "EmailSenderImplementation2\EmailSenderImplementation2.csproj", "{C49C55A6-2126-4B9A-8E7F-D5A2B2B827A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailSenderImplementation2", "EmailSenderImplementation2\EmailSenderImplementation2.csproj", "{C49C55A6-2126-4B9A-8E7F-D5A2B2B827A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSenderImplementation1", "EmailSenderImplementation1\EmailSenderImplementation1.csproj", "{877B0BFE-11DE-440F-BD6E-55CB381E64F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailSenderImplementation1", "EmailSenderImplementation1\EmailSenderImplementation1.csproj", "{877B0BFE-11DE-440F-BD6E-55CB381E64F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyDependencyInjectionContainer", "TinyDependencyInjectionContainer\TinyDependencyInjectionContainer.csproj", "{3D573B16-E342-4DC8-8D29-581E90D9CECF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyDependencyInjectionContainer", "TinyDependencyInjectionContainer\TinyDependencyInjectionContainer.csproj", "{3D573B16-E342-4DC8-8D29-581E90D9CECF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E4ABD4E5-8B47-47BA-A22F-38379C3B9DBC}"
+	ProjectSection(SolutionItems) = preProject
+		TDIC_Configuration.txt = TDIC_Configuration.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
