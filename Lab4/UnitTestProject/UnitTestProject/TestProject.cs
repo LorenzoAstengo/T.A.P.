@@ -9,7 +9,16 @@ namespace UnitTestProject
         {
             if(seqList==null || newValuesList==null)
                 throw new ArgumentNullException();
-            return newValuesList;
+
+            List<T> resList = new List<T>();
+            foreach (var elem in seqList)
+            {
+                if (elem.Equals(val))
+                    resList.AddRange(newValuesList);
+                else
+                    resList.Add(elem);
+            }
+            return resList;
         }
 
         public static void Main()
